@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: ai-agent
+
+  ai:
+    dashscope:
+      api-key: ${ali-api}
+      chat:
+        options:
+          model: qwen-max
