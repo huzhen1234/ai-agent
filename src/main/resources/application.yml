@@ -8,3 +8,14 @@ spring:
       chat:
         options:
           model: qwen-max
+    chat:
+      memory:
+        repository:
+          jdbc:
+            mysql:
+              enabled: true
+              jdbc-url: jdbc:mysql://localhost:3306/spring_ai_alibaba_mysql?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&allowMultiQueries=true&tinyInt1isBit=false&allowLoadLocalInfile=true&allowLocalInfile=true&allowUrl
+              username: root
+              password: root
+              driver-class-name: com.mysql.cj.jdbc.Driver
+              initialize-schema: true
