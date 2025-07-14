@@ -38,7 +38,18 @@ public class AiConfiguration {
                 .build();
     }
 
+/*    *//**
+     * 基于内存的记忆功能
+     *//*
+    @Bean
+    public ChatMemory chatMemory() {
+        return MessageWindowChatMemory.builder().build();
+    }*/
 
+
+    /**
+     * 基于 mysql的记忆功能
+     */
     @Bean
     public ChatMemory chatMemory(MysqlChatMemoryRepository mysqlChatMemoryRepository) {
         return MessageWindowChatMemory.builder()

@@ -19,3 +19,8 @@ spring:
               password: root
               driver-class-name: com.mysql.cj.jdbc.Driver
               initialize-schema: true
+logging:
+  level:
+    org.springframework.ai: debug
+    com.alibaba.dashscope.api: debug
+    com.alibaba.cloud.ai.dashscope.chat: debug
