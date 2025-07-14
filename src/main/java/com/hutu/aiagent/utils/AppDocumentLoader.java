@@ -13,11 +13,11 @@ import java.util.List;
 
 @Component
 @Slf4j
-public class LoveAppDocumentLoader {
+public class AppDocumentLoader {
 
     private final ResourcePatternResolver resourcePatternResolver;
 
-    LoveAppDocumentLoader(ResourcePatternResolver resourcePatternResolver) {
+    AppDocumentLoader(ResourcePatternResolver resourcePatternResolver) {
         this.resourcePatternResolver = resourcePatternResolver;
     }
 

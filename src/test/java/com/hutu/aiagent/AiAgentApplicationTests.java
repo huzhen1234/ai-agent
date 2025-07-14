@@ -1,7 +1,7 @@
 package com.hutu.aiagent;
 
 import cn.hutool.json.JSONUtil;
-import com.hutu.aiagent.utils.LoveAppDocumentLoader;
+import com.hutu.aiagent.utils.AppDocumentLoader;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.document.Document;
@@ -13,7 +13,7 @@ import java.util.List;
 class AiAgentApplicationTests {
 
     @Resource
-    private LoveAppDocumentLoader loveAppDocumentLoader;
+    private AppDocumentLoader loveAppDocumentLoader;
 
     @Test
     void contextLoads() {

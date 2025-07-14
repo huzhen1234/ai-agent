@@ -1,6 +1,7 @@
 package com.hutu.aiagent.controller;
 
 import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.memory.ChatMemory;
@@ -34,10 +35,12 @@ public class AiMemoryController {
      * @param chatId
      * @return
      */
-    @GetMapping("/call")
+    @GetMapping(value = "/call")
     public Flux<String> call(@RequestParam(value = "query") String query,
-                             @RequestParam(value = "chatId") String chatId
+                             @RequestParam(value = "chatId") String chatId,
+                             HttpServletResponse response
     ) {
+        response.setCharacterEncoding("UTF-8");
         return chatClient.prompt(query)
                 .advisors(
                         a -> a.param(CONVERSATION_ID, chatId)
