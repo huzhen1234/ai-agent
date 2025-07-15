@@ -70,6 +70,7 @@
             <artifactId>spring-ai-advisors-vector-store</artifactId>
         </dependency>
 
+<!--        解析 markdown 文本解析器-->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-markdown-document-reader</artifactId>
